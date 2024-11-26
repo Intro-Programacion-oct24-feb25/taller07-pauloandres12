@@ -20,27 +20,35 @@ public class Problema04 {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
         
-        int num1 = 1;
-        int contador = 3;
-        int limite = 15;
-        String resultado = "";
+        int num = 1;
+        int den = 1;
+        String cadena = "";
         String signo = "";
-   
-        while(contador<=limite){
         
-        resultado = String.format("%s - %s/%s",
-                        resultado,
-                        num1,
-                        contador);
-                        
-            contador = contador + 2;
-            resultado = String.format("%s",resultado);
+        cadena = String.format("%s%d ",
+                cadena,
+                num);
         
+        while (den <= 13) {
+            
+            signo = switch (den) {
+                case 1 -> "-";
+                case 5 -> "-";
+                case 9 -> "-"; 
+                case 13 -> "-";
+                default -> "+";
+            };
+            
+         den = den + 2;
+         cadena = String.format("%s %s %d/%d",
+                 cadena,
+                 signo,
+                 num,
+                 den);
         }
-        System.out.printf("%s%s\n",
-                num1,
-                resultado);
         
+        System.out.printf("%s\n",
+                cadena);
     }
     
 }
