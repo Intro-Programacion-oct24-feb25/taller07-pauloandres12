@@ -53,14 +53,12 @@ public class Problema01 {
             System.out.println("Ingrese la estatura del Jugador: ");
             estatura = entrada.nextDouble();
             entrada.nextLine();
-            // agrego una iteración
+            
             contador = contador + 1; // primera(0+1=1)
             sumaEdades = sumaEdades + edad;
             sumaEstatura = sumaEstatura + estatura;
             cadenaEdad += "" + edad + "\n";
-          
-
-            // Ejmplo 1. Alexander Dominguez -Arquero-, edad 32, estatura 1.95
+         
             cadena = String.format("%s%d. %s -%s-, edad: %d, estatura: "
                     + "%.2f "
                     + "\n",
@@ -71,10 +69,6 @@ public class Problema01 {
                     edad,
                     estatura);
             
-            
-            
-
-            // entrada.nextLine(); //
             System.out.println("Desea salir del ciclo, digite: salir");
             salir = entrada.nextLine();
             if(salir.equals("salir")){
@@ -96,7 +90,6 @@ public class Problema01 {
                     promedioEdad,
                     promedioEstatura);
  
-        // presentación de cadena final
         System.out.printf("%s\n", cadena);
 
     }
