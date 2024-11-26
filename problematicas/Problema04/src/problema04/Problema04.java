@@ -28,7 +28,7 @@ public class Problema04 {
    
         while(contador<=limite){
         
-        resultado = String.format("%s -%s/%s",
+        resultado = String.format("%s - %s/%s",
                         resultado,
                         num1,
                         contador);
